@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 定义别名 -->
+	<typeAliases>
+		<package name="com.mapper"/>
+	</typeAliases>
+	
+	<!-- 配置 mybatis的分页插件 -->
+	<plugins>
+		<!-- com.github.pagehelper 为 PageHelper类所在包名 -->
+		<plugin interceptor="com.github.pagehelper.PageInterceptor">
+			<!-- 分页参数合理化，默认为false。
+			  启动合理化时，如果pageNum < 1 会查询第一页，
+			  如果pageNum > pages 会查询最后一页；
+			禁用合理化时，如果pageNum < 1或pageNum > pages会返回空数据。 -->
+			<property name="reasonable" value="true"/>
+			<!-- 设置数据库类型Oracle,Mysql,MariaDB,SQLite,Hsqldb,PostgreS -->
+			<property name="helpetrDialect" value="mysql"/>
+		</plugin>
+	</plugins>
+	<!-- mapper映射 -->
+	<mappers>
+		<package name="com.mapper"/>
+	</mappers>
+	
+</configuration>

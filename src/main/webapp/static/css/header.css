@@ -1,0 +1,235 @@
+.header{
+/*	height: 80px;
+	background: white;
+	border-bottom: 1px solid #d8d8d8;*/
+	/*height: 80px;
+	position: fixed;
+	top: 0;*/
+	z-index: 999;
+	width: 100%;
+	min-width: 1200px;
+	background-color: #fff;
+}
+.header-top{
+	height: 81px;
+	border-bottom: 1px solid #d8d8d8;
+}
+.header .header-inner{
+	width: 1420px;
+	height: 80px;
+	margin: 0 auto;
+}
+.header .header-inner h1{
+	float: left;
+	width: 260px;
+	height: 80px;
+}
+.header .header-inner .logo{
+	background-image: url("../images/logo_h.jpg");
+	display: block;
+	float: left;
+	width: 150px;
+    height: 80px;
+    margin-left: 130px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: auto 65px;
+}
+.header .nav{
+	width: 400px;
+	height: 80px;
+	display: block;
+	overflow: hidden;
+	margin-left: 40px;
+	float: left;
+}
+.header .nav ul{
+
+}
+.header .nav ul li{
+	width: 80px;
+	height: 80px;
+	float: left;
+}
+.header .nav ul li a{
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	height: 80px;
+	line-height: 80px;
+	width: 80px;
+	font-size: 18px;
+	color: #333;
+}
+.header .nav ul li a:hover{
+	color: #fff;
+	background-color: #ef4238;
+}
+.header .app-download{
+	float: left;
+	background: url("../images/app.jpg");
+	width: 162px;
+	height: 80px;
+}  
+.header form{
+	width: 260px;
+	height: 40px;
+	float: right;
+	margin: 20px 10px 0 0;
+	position: relative;
+}
+
+.header form .search{
+
+	display: inline-block;
+	height: 40px;
+	line-height: 1.2;
+	width: 260px;
+	padding: 0 40px 0 20px;
+	border: 1px solid #ccc;
+	font-size: 14px;
+	border-radius: 30px;
+	background-color: #faf8fa;
+	overflow: hidden;
+	color: #333;
+}
+.header form .submit{
+	display: inline-block;
+	position: absolute;
+	left: 220px;
+	top: 0;
+	height: 40px;
+	width: 40px;
+	background-color: #ef4238;
+	border-radius: 30px;
+	background-image: url("../images/search.jpg");
+	cursor: pointer;
+}
+.header .user-info{
+	float: right;
+	position: relative;
+	z-index: 9999;
+	height: 100%;
+	margin-right: 200px;
+}
+.header .user-info .user-avatar {
+	display: block;
+	border: 1px solid transparent;
+	border-top: none;
+	border-bottom: none;
+	padding: 0 10px;
+	width: 56px;
+	height: 100%;
+}
+.header .user-info .user-avatar:hover{
+
+}
+.header .user-info .user-avatar img {
+	margin-top: -20px;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.caret {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: middle;
+	border-top: 5px solid #666;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	-webkit-transition: all .2s ease;
+	transition: all .2s ease;
+}
+.header .user-info .user-avatar .caret {
+	position: absolute;
+	top: 39px;
+	right: 10px;
+}
+.header .user-info .user-menu {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 80px;
+	border: 1px solid #d8d8d8;
+	background-color: #fff;
+	font-size: 14px;
+	color: #333;
+	text-align: right;
+	padding: 15px 26px 5px;
+	text-align: center;
+}
+.header .user-info .user-menu li {
+	margin-bottom: 6px;
+}
+.header .user-info .user-menu li>a {
+	color: #999;
+	display: block;
+	word-break: keep-all;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.header form, .header h3, .header input, .header li, .header ul{
+	border:none;
+}
+.header .banner{
+	height: 440px;
+	width: 100%;
+	min-width: 1200px;
+}
+.header .banner .slider{
+	position: relative;
+	z-index: 1;
+	display: block;
+	height: 440px;
+	overflow: hidden;
+	width: 1420px;
+	margin: 0 auto;
+	margin-bottom: 88px!important;
+}
+	  
+
+
+.fu-nav{
+	background-color: #47464a !important;
+	height: 60px;
+	text-align: center;
+}
+.fu-nav .layui-this a{
+	color: #ef4238 !important;
+}
+.fu-nav li{
+	width: 144px;
+}
+.fu-nav .layui-this:after, .layui-nav-bar,  li:after{
+	background-color: rgba(177, 25, 131, 0) !important;
+}
+.fu-nav a{
+	font-size: 16px;
+	text-decoration: none;
+	cursor: pointer;
+}
+.layui-carousel img{
+	width: 100%;
+	height: auto;
+}
+.nav-image a{
+	text-align: center;
+	height: 35px;
+	text-decoration: none;
+	line-height: 40px;
+}
+
+
+.header-li{
+	width: 42px;
+    height: 42px;
+    margin-top: 18px;
+}
+body .layui-nav .layui-nav-more
+{
+	display: none;
+}

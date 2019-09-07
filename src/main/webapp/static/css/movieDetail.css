@@ -1,0 +1,315 @@
+	.main-content {
+	    width: 1130px;
+	    float: left;
+	}
+	.tab-container .tab-title-container {
+		width: 1130px;
+		height: 30px;
+    	border-bottom: 2px solid #eee;
+	}
+	.tab-container .tab-title-container .tab-title.active {
+	    color: #ef4238;
+	    border-bottom-color: #ef4238;
+	}
+	.tab-container .tab-title-container .tab-title {
+	    cursor: pointer;
+	    float: left;
+	    margin-right: 30px;
+	    margin-bottom: -2px;
+	    padding-bottom: 10px;
+	    font-size: 18px;
+	    color: #333;
+	    line-height: 100%;
+	    border-bottom: 2px solid transparent;
+	}
+	.tab-container .tab-title-container .tab-title.tab-disabled {
+	    color: #999;
+	    cursor: not-allowed;
+	}
+
+	.tab-container .tab-content-container .tab-content.active {
+	    display: block;
+	}
+	.tab-container .tab-content-container .tab-content {
+	    display: none;
+	}
+
+	.tab-desc {
+	    margin-top: 40px;
+	}
+	.module {
+	    position: relative;
+	    margin-bottom: 60px;
+	}
+	.module .mod-title h3 {
+	    display: inline-block;
+	    margin: 0;
+	    padding: 0;
+	    font-weight: 400;
+	    font-size: 18px;
+	    color: #333;
+	    line-height: 18px;
+	}
+	.module .mod-title h3:before {
+	    float: left;
+	    content: "";
+	    display: inline-block;
+	    width: 4px;
+	    height: 18px;
+	    margin-right: 6px;
+	    background-color: #ef4238;
+	}
+	.module .mod-content {
+	    margin-top: 20px;
+	    color: #333;
+	}
+	.tab-desc .dra {
+	    font-size: 14px;
+	    line-height: 26px;
+	}
+	.module .mod-title .more {
+	    float: right;
+	    cursor: pointer;
+	    font-size: 14px;
+	    color: #999;
+	    padding-right: 14px;
+	    background:  no-repeat 100%;
+	}
+	.clearfix:after, .clearfix:before {
+	    content: " ";
+	    display: table;
+	}
+	.tab-desc .celebrity-container .celebrity-group:first-child {
+    margin-left: 0;
+	}
+	.tab-desc .celebrity-container .celebrity-group {
+	    float: left;
+	    margin-left: 45px;
+	}
+	.celebrity-container .celebrity-type {
+    	margin-bottom: 16px;
+	}
+	.celebrity-container .celebrity-list {
+    	margin-left: -20px;
+	}
+	.tab-desc .celebrity-container .celebrity-group .celebrity {
+    margin-bottom: 0;
+	}
+	.celebrity-container .celebrity {
+	    float: left;
+	    width: 128px;
+	    margin-left: 20px;
+	    margin-bottom: 20px;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	}
+	.celebrity-container .celebrity .portrait {
+	    margin-bottom: 6px;
+	    width: 128px;
+	    height: 170px;
+	    overflow: hidden;
+	}
+	.celebrity-container .celebrity .portrait img {
+	    width: 128px;
+	    height: 170px;
+	}
+	.default-img {
+	    /* background-image: url("../images/movies/banner.jpg") top no-repeat; */
+	    background-position: 50%;
+	    background-size: 68px 62px;
+	    background-repeat: no-repeat;
+	}
+	.celebrity-container .celebrity .name {
+	    margin-top: 8px;
+	    line-height: 1.2;
+	    color: #333;
+	}
+	.celebrity-container .celebrity .name, .celebrity-container .celebrity .role {
+	    display: inline-block;
+	    width: 128px;
+	    text-align: center;
+	    padding-bottom: 1px;
+	    margin-bottom: -1px;
+	    text-overflow: ellipsis;
+	    overflow: hidden;
+	    white-space: nowrap;
+	}
+	.banner2 .wrapper .celeInfo-right {
+	    margin-top: 4px;
+	}
+	.staringPeople{
+		height: 300px;
+	}
+	.comment-container .main2 {
+   	 	margin-left: 70px;
+	}
+	.comment-container {
+    	margin-top: 20px;
+	}
+	.comment-container .portrait-container {
+	    margin-right: 20px;
+	    float: left;
+	    position: relative;
+	    width: 50px;
+	    height: 50px;
+	}
+	.comment-container .portrait {
+	    border-radius: 50%;
+	    overflow: hidden;
+	    width: 50px;
+	    height: 50px;
+	}
+	.comment-container .portrait img {
+    	width: 50px;
+	}
+	.comment-container .portrait-container .level-1-icon {
+	    display: inline-block;
+	    width: 20px;
+	    height: 20px;
+	    position: absolute;
+	    bottom: -2px;
+	    right: -2px;
+	    
+	}
+	.comment-container .main2-header {
+	    position: relative;
+	    font-size: 16px;
+	}
+	.comment-container .main2-header .user {
+    	margin-top: 2px;
+	}
+	.comment-container .main2-header .name {
+	    vertical-align: middle;
+	    color: #333;
+	}
+	.comment-container .main2-header .tag {
+	    display: inline-block;
+	    width: 14px;
+	    height: 14px;
+	    border: 1px solid #7cc6f9;
+	    border-radius: 2px;
+	    color: #7cc6f9;
+	    font-size: 12px;
+	    line-height: 14px;
+	    text-align: center;
+	}
+	.comment-container .main2-header .time {
+	    margin-top: 4px;
+	    color: #999;
+	}
+	.comment-container .main2-header .time {
+    margin-top: 4px;
+    color: #999;
+	}	
+	.comment-container .main2-header .score-star {
+	    display: inline-block;
+	}
+	.score-star li {
+	    float: left;
+	    height: 16px;
+	}
+	.comment-container .approve {
+	    position: absolute;
+	    top: 20px;
+	    right: 0;
+	}
+	.comment-container .approve .approve-icon {
+    cursor: pointer;
+    margin-top: -6px;
+    margin-right: 8px;
+    vertical-align: middle;
+	}
+	.like-icon, i.approve-icon {
+	    display: inline-block;
+	    width: 16px;
+	    height: 16px;
+	   
+	}
+	.comment-container .approve .num {
+    font-size: 14px;
+    color: #999;
+	}
+	.clearfix:after {
+    clear: both;
+	}
+	.clearfix:after, .clearfix:before {
+	    content: " ";
+	    display: table;
+	}
+	.comment-container .comment-content {
+    margin-top: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e5e5;
+    color: #666;
+    line-height: 26px;
+    font-size: 14px;
+	}
+	.comment-entry {
+	    cursor: pointer;
+	    position: absolute;
+	    top: -10px;
+	    right: 0;
+	    display: block;
+	    height: 30px;
+	    padding: 0 10px;
+	    border-radius: 15px;
+	    border: 1px solid #ef4238;
+	    text-align: center;
+	    font-size: 14px;
+	    line-height: 30px;
+	    color: #ef4238;
+	}
+	.comment-entry:hover {
+		text-decoration: none;
+		color: #fff;
+		background-color: #ef4238;
+	}
+	.deleteCom{
+		cursor: pointer;
+		height: 30px !important;
+		width: 67px;
+		padding: 6 10px;
+		border-radius: 15px;
+		border: 1px solid #ef4238;
+		text-align: center;
+		font-size: 14px;
+		line-height: 30px;
+		color: #ef4238;
+		margin-left: 80px;
+	}
+	.deleteCom:hover{
+		border: 1px solid #ef4238;
+		background-color: #ef4238;
+		color: #fff;
+		text-decoration: none;
+	}
+	.updateBtn{
+		cursor: pointer;
+		height: 30px !important;
+		width: 67px;
+		float: left;
+		padding: 6 10px;
+		border-radius: 15px;
+		border: 1px solid #009688;
+		text-align: center;
+		font-size: 14px;
+		line-height: 30px;
+		color: #009688;
+	}
+	.updateBtn:hover{
+		border: 1px solid #009688;
+		background-color: #009688;
+		color: #fff;
+		text-decoration: none;
+	}
+	.commenttitle{
+		margin: 30px 0;
+		font-size: 18px;
+		text-align: center;
+	}
+	.username, .commenttime, .commentcontent{
+		width: 280px;
+	}
+	.usernametext, .commenttimetext, .commentcontenttext{
+		width: 100px !important;	
+	}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.UserMapper">
+	<resultMap type="com.entity.User" id="BaseResultMap">
+		<id property="user_id" column="user_id" javaType="long"/>
+		<result property="user_name" column="user_name" javaType="java.lang.String"/>
+		<result property="user_pwd" column="user_pwd" javaType="java.lang.String"/>
+		<result property="user_email" column="user_email" javaType="java.lang.String"/>
+		<result property="user_role" column="user_role" javaType="java.lang.Integer"/>
+		<result property="user_headImg" column="user_headImg" javaType="java.lang.String"/>
+	</resultMap>
+	<select id="findUserById" parameterType="long" resultMap="BaseResultMap">
+		select * from user where user_id = #{id}
+	</select>
+	<select id="findAllUser" resultMap="BaseResultMap">
+		select * from user
+	</select>
+	<select id="findUserByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select * from user where user_name = #{name}
+	</select>
+	<select id="findUserLikeName" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select * from user where user_name like '%${value}%'
+	</select>
+	<insert id="addUser" parameterType="com.entity.User">
+		insert into user(user_name,user_pwd,user_email)
+		values(#{user_name},#{user_pwd},#{user_email})
+	</insert>
+	<update id="updateUser" parameterType="com.entity.User">
+		update user 
+		<set>
+			<if test="user_name!=null">
+				user_name = #{user_name},
+			</if>
+			<if test="user_pwd!=null">
+				user_pwd = #{user_pwd},
+			</if>
+				user_email = #{user_email},
+				user_headImg = #{user_headImg}
+		</set>
+		where user_id = #{user_id}
+	</update>
+</mapper>

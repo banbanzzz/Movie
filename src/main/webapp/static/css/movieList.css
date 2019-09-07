@@ -1,0 +1,162 @@
+.movies-channel {
+	    width: 1120px;
+	    margin: auto;
+	    overflow: hidden;
+	}
+	.tags-panel {
+	    border: 1px solid #e5e5e5;
+	    padding: 0 20px;
+	    margin-top: 40px;
+	}
+	.tags-panel li, .tags-panel ul {
+	    margin: 0;
+	    padding: 0;
+	    list-style-type: none;
+	}
+	.tags li.active {
+	    background: #f34d41;
+	    color: #fff;
+	}
+	.tags li.active a {
+    	color: #fff;
+	}
+	.tags li a {
+		
+	    color: #333;
+	    font-size: 14px;
+	}
+	.tags li {
+		
+	    border-radius: 14px;
+	    padding: 3px 9px;
+	    display: inline-block;
+	    margin-left: 12px;
+	}
+	.tags-title {
+	    height: 24px;
+	    line-height: 24px;
+	    float: left;
+	    color: #999;
+	    font-size: 14px;
+	}
+	.tags {
+    	margin-left: 40px!important;
+	}
+	.tags-line {
+	    padding: 10px 0!important;
+	}
+
+	.tags-line-border {
+    	border-top: 1px dotted #e5e5e5;
+	}
+	.movies-panel {
+  	  margin-top: 40px;
+  	  margin-left: 30px;
+	}
+	.movies-sorter {
+    	overflow: hidden;
+	}
+	.movies-sorter .cat-sorter {
+	    float: left;
+	    padding-left: 2px;
+	}
+	.movies-sorter ul {
+	    margin: 0;
+	    padding: 0;
+	    list-style: none;
+	}
+	.movies-sorter li {
+	    display: inline-block;
+	    height: 20px;
+	    line-height: 18px;
+	    margin-right: 30px;
+	}
+	.sort-control-group {
+	    cursor: pointer;
+	    line-height: 16px;
+	}
+	
+	.sort-radio {
+	    background: url("../images/circle-white.jpg") no-repeat;
+	}
+	.sort-radio-checked {
+    	background: url("../images/circle-red.jpg") no-repeat;
+	}
+	.sort-control {
+	    display: inline-block;
+	    vertical-align: top;
+	    width: 20px;
+	    height: 20px;
+	    margin-right: 2px;
+	}
+	.sort-control-label {
+	    font-size: 14px;
+	    vertical-align: top;
+	}
+
+	.movie-item {
+	    position: relative;
+	    border: 1px solid #efefef;
+	    margin: -1px;
+	}
+
+	.movie-poster {
+	    background-color: #fcfcfc;
+	    width: 160px;
+	    height: 220px;
+	    overflow: hidden;
+	    position: relative;
+	}
+	.channel-action-sale {
+    	background-color: #f34d41;
+	}
+	.channel-action {
+	    position: absolute;
+	    right: 5px;
+	    bottom: 5px;
+	    padding: 0 3px;
+	    height: 18px;
+	    line-height: 18px;
+	    border-radius: 1px;
+	}
+	.channel-action a {
+	    color: #fff;
+	    font-size: 12px;
+	    vertical-align: top;
+	}
+	.movie-ver {
+	    position: absolute;
+	    top: 4px;
+	    left: -2px;
+	    font-size: 12px;
+	    color: #fff;
+	}
+	.channel-detail {
+	    width: 160px;
+	    white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    text-align: center;
+	    font-size: 16px;
+	    color: #333;
+	    margin-top: 10px;
+	}
+	.channel-detail a {
+    	color: #333;
+	}
+	.channel-detail-orange, .channel-detail-prescore {
+    	color: #ffb400;
+	}
+	.channel-detail-orange .integer {
+    	font-size: 18px;
+	}
+	.channel-detail-orange .fraction {
+    	font-size: 14px;
+	}
+
+	.movie-list li {
+    	margin: 0 28px 40px 0px;
+	}
+	.movie-item {
+	    height: 220px;
+	}

@@ -1,0 +1,381 @@
+.container{
+	/*padding: 0;*/
+	width: 1530px !important;
+	/*height: 1200px;*/
+	/*margin-bottom: 100px;*/
+}
+.container .contents .nav-next{
+	float: left;
+	width: 200px;
+	height: 1200px;
+	background-color: #f4f3f4;
+	border: 1px solid #ddd;
+}
+.container .contents .nav-next .nav-title{
+	margin: 40px auto 30px;
+	text-align: center;
+}
+.container .contents .nav-next a{
+	font-size: 18px;
+	text-align: center;
+	display: block;
+	text-decoration: none;
+	cursor: pointer;
+	height: 40px;
+	width: 100%;
+	line-height: 40px;
+}
+.container .contents .nav-next .active{
+	color: #fff;
+	background-color: #ed3931;
+}
+
+.container .contents .nav-body{
+	float: left;
+	width: 1300px;
+	height: 1200px;
+	border: 1px solid #ddd;
+	padding-left: 40px;
+}
+.container .contents .nav-body .one, .two, .three, .four, .five, .six{
+	float: left;
+	width: 100%;
+	height: 100%;
+}
+.container .contents .nav-body .title{
+	font-size: 18px;
+	color: #ec443f;
+	padding: 26px 0;
+}
+.container .contents .nav-body hr{
+	margin-bottom: 30px;
+}
+
+
+
+
+
+/************************ 用户管理 ******************************/
+.container .one .userlist{
+	margin-right: 40px;
+}
+.addusertitle{
+	text-align: center;
+	font-size: 18px;
+	margin: 20px auto 20px;
+}
+.addusertext{
+	width: 60%;
+}
+.adduserbtn{
+	width: 100px;
+	float: left;
+}
+.usercheck{
+	margin-left: 30px;
+	width: 400px;
+	float: left;
+}
+.usercheck input{
+	width: 200px;
+	height: 30px;
+	float: left;
+}
+.usercheck button{
+	float: left;
+}
+.layui-table-box{
+	clear: both;
+}
+
+
+
+/************************ 电影管理 ******************************/
+.container .two .main-inner{
+	height: 1090px;
+	overflow-y: auto;
+}
+.container .two .main-inner .addMovie{
+	margin-bottom:30px;
+	height:215px;
+}
+.container .two .main-inner .addMovie img{
+	display:block;
+	width:160;
+	height:160;
+	float:left;
+	cursor:pointer;
+}
+.container .two .main-inner .addMovie span{
+	font-size: large;
+	float: left;
+	display: block;
+	clear: both;
+	margin-left: 42px;
+}
+.container .two .movies-list{
+	margin-top: 23px;
+}
+.container .two .movies-list li{
+	margin: 0 80px 60px 0px;
+	float: left;
+	width: 160px;
+	height: 259px;
+	background: #fff;
+	border: 1px solid #efefef;
+}
+.container .two .movies-detail-strong {
+	height: 39px;
+	line-height: 39px;
+}
+.container .two .movies-detail {
+	margin-top: -1px;
+	border: 1px solid #eee;
+	cursor: pointer;
+	position: relative;
+	top: -21px;
+	width: 100%;
+	height: 41px;
+	line-height: 41px;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background-color: #fff;
+}
+.container .two .movies-detail a:hover{
+	text-decoration: none;
+	background: #ef4238;
+	color: #fff;
+}
+.textside{
+	float: left;
+	width: 450px;
+}
+.pictureside{
+	float: left;
+	width: 300px;
+	text-align: center;
+}
+.pictureside .layui-upload{
+	margin: 50px 0px;
+	width: 300px;
+}
+.pictureside #file{
+	width: 80px;
+    height: 30px;
+}
+.pictureside .file {
+	margin-top: 20px; 
+    position: relative;
+    display: inline-block;
+    background: #009688;
+    /* border: 1px solid rgb(44, 243, 77); */
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #fff;
+    text-decoration: none;
+    text-indent: 0;
+	line-height: 20px;
+	cursor: pointer;
+}
+.pictureside .file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+.pictureside .file:hover {
+    background: #00ad9c;
+    /* border-color: #009688; */
+    color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+.pictureside .movie-picture{
+	margin-bottom: 20px;
+}
+.layui-upload-list{
+	margin: 0px !important;
+}
+.textside .layui-form-item{
+	margin-bottom: 2px !important;
+}
+.textside .layui-form-label {
+	width: 100px !important;
+}
+.textside .layui-btn {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	color: #ccc;
+	margin-left: 10px;
+	width: 20px;
+}
+.textside .actor {
+	width: 110px;
+}
+
+
+
+
+
+
+.layui-upload-img{
+	max-width: 160px;
+	max-height: 220px;
+}
+
+/************************ 场次管理 ******************************/
+.container .one .schedulelist{
+	margin-right: 40px;
+}
+.addtitle{
+	text-align: center;
+	font-size: 18px;
+	margin: 20px auto 20px;
+}
+.addmoney{
+	width: 45%;
+}
+.addbtn{
+	width: 100px;
+	float: left;
+}
+.schedulecheck{
+	margin-left: 30px;
+	width: 300px;
+	float: left;
+}
+.schedulecheck input{
+	width: 200px;
+	height: 30px;
+	float: left;
+}
+.layui-table-box{
+	clear: both;
+}
+.scheduleLabel {
+    float: left;
+    display: block;
+    padding: 9px 15px 9px 20px;
+    width: 100px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: right
+}
+.addselect {
+	width: 200px !important;
+}
+.schedule-div{
+	margin-left: 25px;
+}
+#scheduleadd {
+	width: 400px;
+}
+.layui-laydate{
+	position: fixed !important;
+}
+.drop-cinema dl{
+	max-height: 180px !important;
+}
+.drop-hall dl{
+	max-height: 120px !important;
+}
+.scheduleonall{
+	float: left;
+}
+.scheduledownall{
+	float: left;
+	margin-left: 30px;
+}
+.three .schedulelist{
+	margin-right: 40px;
+}
+
+
+
+
+
+
+
+
+/************************ 评论管理 ******************************/
+.container .four .commentlist{
+	margin-right: 40px;
+}
+.commentcheck{
+	margin-left: 30px;
+	width: 400px;
+	float: left;
+}
+.commentcheck input{
+	width: 200px;
+	height: 30px;
+	float: left;
+}
+.commentcheck button{
+	float: left;
+}
+
+
+/************************ 订单管理 ******************************/
+.container .five .ticketlist{
+	margin-right: 40px;
+}
+.ticketcheck{
+	margin-left: 30px;
+	width: 400px;
+	float: left;
+}
+.ticketcheck input{
+	width: 200px;
+	height: 30px;
+	float: left;
+}
+.ticketcheck button{
+	float: left;
+}
+.changeticketBtn{
+	border: 1px solid #ddd !important;
+	position: relative;
+	left: 1.5px;
+	background-color: #fbfbfb !important;
+}
+.orderall{
+	float: left;
+}
+.backorder{
+	float: left;
+	margin-left: 30px
+}
+
+
+
+/************************ 退票审核 ******************************/
+.container .six .backticketlist{
+	margin-right: 40px;
+}
+.backticketcheck{
+	margin-left: 30px;
+	width: 400px;
+	float: left;
+}
+.backticketcheck input{
+	width: 200px;
+	height: 30px;
+	float: left;
+}
+.backticketcheck button{
+	float: left;
+}
+.changebackticketBtn{
+	border: 1px solid #ddd !important;
+	position: relative;
+	left: 1.5px;
+	background-color: #fbfbfb !important;
+}
+
+

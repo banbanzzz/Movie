@@ -1,0 +1,123 @@
+.container{
+    display: block;
+    margin-bottom: 100px;
+    padding: 0;
+}
+.container .order-progress-bar{
+    height: 60px;
+    width: 100%;
+    margin: 40px 0;
+    text-align: center;
+}
+.container .order-progress-bar .step{
+    float: left;
+    width: 25%;
+}
+.container .order-progress-bar .step .step-num{
+    color: #fff;
+    font-size: 12px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffd8d7;
+    position: relative;
+    top: 10px;
+}
+.container .order-progress-bar .first .bar{
+    border-left-color: transparent !important;
+}
+.container .order-progress-bar .last .bar{
+    border-right-color: transparent !important;
+}
+.container .order-progress-bar .step .bar{
+    width: 0;
+    height: 4px;
+    border-left: 150px solid #ffd8d7;
+    border-right: 150px solid #ffd8d7;
+}
+.container .order-progress-bar .done .step-num{
+    background-color: #f03d37;
+}
+.container .order-progress-bar .done .bar{
+    border-left: 150px solid #f03d37;
+    border-right: 150px solid #f03d37;
+}
+.container .order-progress-bar .step .step-next{
+    font-size: 14px;
+    color: #999;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+
+
+
+.container .warning{
+    font-size: 12px;
+    color: #666;
+    padding-left: 18px;
+    background: url(../images/warning.jpg) no-repeat;
+    background-position-x: 900px;
+    background-size: 14px;
+    background-position-y: 2px;
+    margin-bottom: 8px;
+}
+.container .warning .attention{
+    color: #faaf00;
+}
+
+
+
+
+.main-paystatus{
+    text-align: center;
+    padding: 100px 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: rgb(228, 253, 235);
+}
+.main-paystatus img{
+    width: 120px;
+    height: 120px;
+}
+.main-paystatus .statustext{
+    margin-top: 20px;
+    font-size: 24px;
+    color: rgb(0, 148, 0);
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+.container .right{
+    text-align: right;
+}
+.container .right .price-wrapper{
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 17px;
+}
+.container .right .price-wrapper .price{
+    font-size: 36px;
+    color: #f03d37;
+}
+.container .right .pay-btn{
+    cursor: pointer;
+    display: inline-block;
+    width: 190px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    color: #fff;
+    background-color: #f03d37;
+    border-radius: 100px;
+    -webkit-box-shadow: 0 2px 10px -2px #f03d37;
+    box-shadow: 0 2px 10px -2px #f03d37;
+}

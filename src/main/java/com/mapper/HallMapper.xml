@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.HallMapper">
+	<resultMap type="com.entity.Hall" id="BaseResultMap">
+		<id property="hall_id" column="hall_id" javaType="long"/>
+		<result property="hall_name" column="hall_name" javaType="java.lang.String"/>
+		<result property="cinema_id" column="cinema_id" javaType="long"/>
+	</resultMap>
+	
+	<select id="findHallById" parameterType="long" resultMap="BaseResultMap">
+		select * from hall where hall_id = #{hall_id}
+	</select>
+	
+	<select id="findHallByCinemaAndHallName" resultMap="BaseResultMap">
+		select hall.* from hall,cinema where hall.cinema_id = cinema.cinema_id 
+		and cinema_name = #{cinema_name} and hall_name= #{hall_name}
+	</select>
+		
+	<select id="findHallByCinemaId" parameterType="long" resultMap="BaseResultMap">
+		select * from hall where cinema_id = #{cinema_id}
+	</select>
+	
+	<select id="findAllHalls" resultMap="BaseResultMap">
+		select * from hall
+	</select>
+	
+	<insert id="addHall" parameterType="com.entity.Hall">
+		insert into hall(hall_name,movie_id)
+		values(hall_name,movie_id)
+	</insert>
+	
+	<update id="updateHall" parameterType="com.entity.Hall">
+		update hall
+		<set>
+			hall_name = #{hall_name},
+			movie_id = #{movie_id}
+		</set>
+		where hall_id = #{hall_id}
+	</update>
+	
+	<delete id="deleteHall" parameterType="long">
+		delete from hall where hall_id = #{hall_id}
+	</delete>
+</mapper>

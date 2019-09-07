@@ -1,0 +1,219 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.aside {
+    float: right;
+    width: 360px;
+}
+.ranking-box-wrapper .panel-content {
+    height: 450px;
+    width: 100%;
+    margin-top: 23px;
+}
+.panel-content {
+    width: 100%;
+    margin-top: 23px;
+}
+.main .panel {
+    margin-top: 28px;
+}
+.panel-header {
+overflow: hidden;
+height: 26px;
+line-height: 26px;
+}
+.panel-title .textcolor_red{
+    font-size: 26px;
+}
+.panel-title .textcolor_blue{
+    font-size: 26px;
+}
+.ranking-index-1{
+    margin-bottom:11px;
+    border: 1px solid #efefef;
+}
+.ranking-box .ranking-top-left{
+    width: 120px;
+    height: 78px;
+    float: left;
+    position: relative;
+}
+.ranking-top-right{
+        padding-left:10px;
+        overflow: hidden;
+        height:78px;
+        line-height: 78px;
+}
+.ranking-box .ranking-top-right-main{
+    width: 220px;
+}
+.ranking-top-right-main{
+    display: inline-block;
+    line-height:1;
+    vertical-align: middle;
+}
+    .ranking-top-right .ranking-top-moive-name{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.4;
+}
+
+    .ranking-top-right .ranking-top-wish,.textcolor_red {
+    color: #ef4238;
+}
+.ranking-top-right .ranking-top-wish{
+margin-top:12px;
+font-size: 14px;
+}
+.stonefont{
+    font-size: 14px;
+}
+.ranking-item .normal-link{
+    display: block;
+    height: 35px;
+    line-height: 35px;
+}
+.ranking-index-2 .ranking-index,
+.ranking-index-3 .ranking-index{
+    color:#ef4238;
+}
+.ranking-item .ranking-index{
+    display: inline-block;
+    width:20px;
+}
+.ranking-index{
+    color:#999;
+    font-size:18px;
+    vertical-align:top;
+}
+.ranking-item .ranking-movie-name{
+    display: inline-block;
+    max-width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+    color: #333;
+    vertical-align: top;
+}
+.ranking-num-info{
+    float: right;
+    font-size: 14px;
+}
+.ranking-num-info {
+    color:#ef4238;
+}
+
+/* 222 */
+.textcolor_orange {
+    color: #ffb400!important;
+}
+.panel-more {
+    font-size: 14px;
+    line-height: 16px;
+    float: right;
+    margin-top: 10px;
+}
+.panel-content {
+    width: 100%;
+    margin-top: 23px;
+}
+.ranking-mostExpect .ranking-top-left {
+    width: 140px;
+    height: 194px;
+    float: left;
+    position: relative;
+}
+.ranking-mostExpect .ranking-top-right {
+    height: 194px;
+    line-height: 194px;
+}
+.ranking-top-right{
+    padding-left: 10px;
+    overflow: hidden;
+}
+.ranking-top-right .ranking-release-time {
+    margin-top: 12px;
+    color: #999;
+}
+.ranking-top-right .ranking-top-wish {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #ffb400;
+}
+.ranking-mostExpect .ranking-index-2, .ranking-mostExpect .ranking-index-3 {
+    border: 1px solid #efefef;
+    position: relative;
+    width: 170px;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+}
+.ranking-mostExpect .ranking-index-2 .ranking-index, .ranking-mostExpect .ranking-index-3 .ranking-index {
+    position: absolute;
+    padding-left: 4px;
+    width: 16px;
+    line-height: 20px;
+    color: #fff;
+    background-color: #ffb400;
+}
+.ranking-mostExpect .ranking-index-2 .name-link, .ranking-mostExpect .ranking-index-3 .name-link {
+    display: block;
+    font-size: 18px;
+    color: #333;
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.ranking-mostExpect .ranking-index-2 .ranking-num-info, .ranking-mostExpect .ranking-index-3 .ranking-num-info {
+    float: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 6px;
+    margin-left: 10px;
+}
+.ranking-num-info{
+    color:#fdb863;  
+}
+.ranking-item .normal-link {
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    margin-top: 5px; 
+}
+.ranking-num-info {
+    float: right;
+    color: #fdb863;
+    font-size: 14px;
+}
+.ranking-mostExpect .ranking-index-4 {
+    clear: both;
+}
+    .ranking-top100 .ranking-top-right {
+    height: 78px;
+    line-height: 78px;
+    padding-left: 10px;
+    overflow: hidden;
+}
+.ranking-top100 .ranking-top-left {
+    width: 120px;
+    height: 78px;
+    float: left;
+    position: relative;
+}
+.top100-wrapper {
+    margin-top: 100px;
+}
+.aside .most-expect-wrapper {
+    margin-top: 10px;
+}
+.ranking-index-2 ,.ranking-index-3{
+    color: #ef4238;
+}

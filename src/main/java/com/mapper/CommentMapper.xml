@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.CommentMapper">
+	<resultMap type="com.entity.Comment" id="BaseResultMap">
+		<id property="comment_id" column="comment_id" javaType="long"/>
+		<result property="comment_content" column="comment_content" javaType="java.lang.String"/>
+		<result property="comment_time" column="comment_time" javaType="java.util.Date"/>
+		<result property="movie_id" column="movie_id" javaType="long"/>
+		<result property="user_id" column="user_id" javaType="long"/>
+	</resultMap>
+	
+	<select id="findCommentById" parameterType="long" resultMap="BaseResultMap">
+		select * from comment where comment_id = #{comment_id}
+	</select>
+	
+	<select id="findAllComments" resultMap="BaseResultMap">
+		select * from comment
+	</select>
+	
+	<select id="findCommentsByUserName" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select comment.* from comment,user where comment.user_id = user.user_id and user.user_name = #{user_name}
+	</select>
+	
+	<select id="findCommentsByMoiveId" parameterType="long" resultMap="BaseResultMap">
+		select * from comment where movie_id = #{movie_id}
+	</select>
+	
+	<insert id="addComemnt" parameterType="com.entity.Comment">
+		insert into comment(comment_content,comment_time,movie_id,user_id)
+		values(#{comment_content},#{comment_time},#{movie_id},#{user_id})
+	</insert>
+	
+	<update id="updateComment" parameterType="com.entity.Comment">
+		update comment
+		<set>
+			comment_content = #{comment_content},
+			comment_time = #{comment_time},
+			movie_id = #{movie_id},
+			user_id = #{user_id}
+		</set>
+		where comment_id = #{comment_id}
+	</update>
+	
+	<delete id="deleteComment" parameterType="long">
+		delete from comment where comment_id = #{comment_id}
+	</delete>
+	
+</mapper>

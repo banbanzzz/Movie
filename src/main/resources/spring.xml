@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xsi:schemaLocation="http://www.springframework.org/schema/data/mongo 
+		http://www.springframework.org/schema/data/mongo/spring-mongo-1.8.xsd
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+		http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+		
+	<!-- 引入属性文件，获取配置参数 -->
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
+		<property name="location" value="classpath:mysql.properties" /> 
+	</bean>
+	
+	 <!-- 使用阿里巴巴的数据库连接池 -->
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"  destroy-method="close">  
+		<property name="driverClassName" value="${driver}" />  
+		<property name="url" value="${url}" />  
+		<property name="username" value="${username}" />  
+		<property name="password" value="${password}" /> 
+		<!-- 连接池参数 --> 
+		<property name="maxActive" value="800"/>
+       	<property name="minIdle" value="10"/>
+	</bean>  
+	
+	<!-- 注册sqlSessionFactoryBean -->
+	<!-- spring和MyBatis完美整合，不需要单独配置mybatis的映射文件 -->	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<!-- 指定数据源  连接池 -->
+		<property name="dataSource" ref="dataSource" />
+		<!-- 指定 mybatis 主配置文件 -->
+		<property name="configLocation" value="classpath:mybatis.xml"/>
+	</bean>
+	
+	<!-- Mapper接口所在的包名，Spring会自动找到其下的类 -->
+	<!-- 生产dao代理对象 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.mapper" />
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+	</bean>
+	
+	<!-- 注册事务管理器 -->
+	<bean id="transactionManager"  class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<!--支持注解驱动的事务管理，指定事务管理器 -->
+   	<tx:annotation-driven transaction-manager="transactionManager"/>
+   	
+   	<!--自动扫描IOC组件  -->
+    <context:component-scan base-package="com"></context:component-scan>
+ 	
+ 	<!-- 开启aspectj代理 -->
+ 	<aop:aspectj-autoproxy/>
+ 	
+ 	
+	<!-- Jackson配置-->
+	<bean id="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper">
+		<property name="serializationInclusion" value="NON_NULL" />
+		<property name="dateFormat">
+			<bean class="java.text.SimpleDateFormat">
+				<constructor-arg value="yyyy-MM-dd HH:mm:ss" />
+			</bean>
+		</property>
+	</bean>
+	
+	<!-- 注解映射支持；JSON转换器 -->
+	<mvc:annotation-driven>
+		<mvc:message-converters register-defaults="true">
+			<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+				<property name="objectMapper" ref="objectMapper" />
+				<property name="supportedMediaTypes">
+					<list>
+						<value>text/plain;charset=UTF-8</value>
+						<value>application/json;charset=UTF-8</value>
+					</list>
+				</property>
+			</bean>
+			<!-- 对于字符串类型解析的配置 -->
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter">  
+            	<property name="supportedMediaTypes" value = "text/html;charset=UTF-8" />  
+        	</bean> 		
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+	
+	<!-- freemarker的配置 -->
+	<bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+		<property name="templateLoaderPath" value="/views/" />
+		<property name="defaultEncoding" value="utf-8" />
+		<property name="freemarkerSettings">
+			<props>
+				<prop key="default_encoding">UTF-8</prop>
+				<prop key="output_encoding">UTF-8</prop>
+				<prop key="template_update_delay">10</prop>
+				<prop key="locale">zh_CN</prop>
+				<prop key="datetime_format">yyyy-MM-dd HH:mm</prop>
+				<prop key="date_format">yyyy-MM-dd</prop>
+				<prop key="time_format">HH:mm:ss</prop>
+				<prop key="number_format">#.##</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!-- FreeMarker视图解析 -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.freemarker.FreeMarkerView"></property>
+		<property name="suffix" value=".html" />
+		<property name="contentType" value="text/html;charset=utf-8" />
+		<property name="exposeRequestAttributes" value="true" />
+		<property name="exposeSessionAttributes" value="true" />
+		<property name="exposeSpringMacroHelpers" value="true" />
+		<property name="cache" value="false" />
+		<property name="requestContextAttribute" value="rc"></property>
+	</bean>
+	
+	<!-- 文件解析器 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="1100000"></property>
+		<property name="defaultEncoding" value="UTF-8"></property>
+	</bean>
+</beans>

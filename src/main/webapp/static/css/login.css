@@ -1,0 +1,168 @@
+﻿*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background-image: url('../images/2.jpg');
+}
+
+.screen{
+  float: left;
+  text-align: center;
+}
+.screen .title{
+  font-size: 72px;
+  color: #fff;
+}
+.screen .ineer_one{
+  margin-top: 20px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: inherit;
+  margin-right: 60px;
+}
+.screen .ineer_two{
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: inherit;
+  margin-left: 60px;
+}
+
+
+
+
+.content{
+  width: 420px;
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.content .tab{
+  width: 420px;
+  height: 50px;
+  border-radius: 8px 8px 0px 0px;
+}
+.content .tab li{
+  cursor: default;
+  text-align: center; 
+  line-height: 50px;
+  font-size: 24px;
+  width: 49.9%;
+  height: 100%;
+  list-style: none;
+  float: left;
+  color: #fff;
+  font-family: '隶书';
+}
+.content .tab .login{
+  cursor: pointer;
+  border-radius: 8px 0px 0px 0px;
+  background-color: rgba(255, 255, 255, 0);
+}
+.content .tab .register{
+  cursor: pointer;
+  border-radius: 0px 8px 0px 0px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+.content .page .childpage{
+  margin-top: -10px; 
+  background: rgba(255, 255, 255, 0);
+  width: 420px;
+  height: 420px;
+  border-radius: 0px 0px 8px 8px;
+  text-align: center;
+}
+
+
+.content .page .childpage .login_page div{
+  margin-top: 30px;
+}
+.content .page .childpage .lo_error{
+  margin-top: 20px;
+}
+.content .page .childpage .login_error{
+  color: rgb(209, 0, 0);
+}
+.content .page .childpage .login_version{
+  margin-top: 90px;
+  color: #ccc;
+}
+.content .page .childpage .login_btn{
+  width: 240px;
+}
+.content .page .childpage .login_page #UserName, #PassWord{
+  width: 240px;
+  height: 30px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+.content .page .childpage .login_page label{
+  color: #fff;
+}
+
+
+.content .page .childpage .login_title, .register_title{
+  margin-top: 40px;
+  font-size: 32px;
+  color: #fff;
+}
+.content .page .childpage .register_page div{
+  margin-top: 10px;
+}
+.content .page .childpage .register_page #UserName, #PassWord, #Email{
+  width: 240px;
+  height: 30px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+.content .page .childpage .register_page #Test{
+  width: 130px;
+  height: 30px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+.content .page .childpage .register_page #TestNum{
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  color: red;
+  margin-left: 20px;
+  width: 88px;
+  height: 30px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+}
+.content .page .childpage .register_page label{
+  color: #fff;
+}
+.content .page .childpage .register_error{
+  color: rgb(209, 0, 0);
+}
+.content .page .childpage .re_error{
+  margin-top: 10px;
+}
+.content .page .childpage .register_btn{
+  width: 240px;
+}
+.content .page .childpage .register_version{
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.screen .big_logo{
+  background-image: url("../images/logo_t.jpg");
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+	width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: 200px auto;
+}

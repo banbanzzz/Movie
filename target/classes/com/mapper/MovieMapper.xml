@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.MovieMapper">
+	<resultMap type="com.entity.Movie" id="BaseResultMap">
+		<id property="movie_id" column="movie_id" javaType="long"/>
+		<result property="movie_actor" column="movie_actor" javaType="java.lang.String"/>
+		<result property="movie_boxOffice" column="movie_boxOffice" javaType="float"/>  
+		<result property="movie_cn_name" column="movie_cn_name" javaType="java.lang.String"/>  
+		<result property="movie_commentCount" column="movie_commentCount" javaType="long"/>  
+		<result property="movie_country" column="movie_country" javaType="java.lang.String"/>
+		<result property="movie_detail" column="movie_detail" javaType="java.lang.String"/>
+		<result property="movie_director" column="movie_director" javaType="java.lang.String"/>
+		<result property="movie_duration" column="movie_duration" javaType="java.lang.String"/>
+		<result property="movie_fg_name" column="movie_fg_name" javaType="java.lang.String"/>
+		<result property="movie_picture" column="movie_picture" javaType="java.lang.String"/>
+		<result property="movie_score" column="movie_score" javaType="float"/>
+		<result property="movie_type" column="movie_type" javaType="java.lang.String"/>
+		<result property="movie_releaseDate" column="movie_releaseDate" javaType="java.sql.Date"/>
+		<result property="movie_state" column="movie_state" javaType="java.lang.Integer"/>
+	</resultMap>
+	
+	<select id="findMovieById" parameterType="long" resultMap="BaseResultMap">
+		select * from movie where movie_id = #{movie_id}
+	</select>
+	
+	<select id="findMovieByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select * from movie where movie_cn_name = #{movie_cn_name}
+	</select>
+	
+	<insert id="addMovie" parameterType="com.entity.Movie">
+		insert into movie(movie_cn_name,movie_fg_name,movie_actor,movie_director,movie_detail,movie_duration,movie_type,movie_score,movie_releaseDate,movie_country,movie_picture)
+		values(#{movie_cn_name},#{movie_fg_name},#{movie_actor},#{movie_director},#{movie_detail},#{movie_duration},#{movie_type},#{movie_score},#{movie_releaseDate},#{movie_country},#{movie_picture})
+	</insert>
+	
+	<update id="deleteMovie" parameterType="long">
+		update movie
+		<set>
+			movie_state = 0
+		</set>
+		where movie_id = #{movie_id}
+	</update>
+	
+	<update id="changeMovieBoxOffice">
+		update movie set movie_boxOffice = movie_boxOffice + #{movie_boxOffice} where movie_id = #{movie_id}
+	</update>
+	
+	<update id="updateMovie" parameterType="com.entity.Movie">
+		update movie
+		<set>
+			movie_cn_name = #{movie_cn_name},
+			movie_fg_name = #{movie_fg_name},
+			movie_actor = #{movie_actor},
+			movie_director = #{movie_director},
+			movie_detail = #{movie_detail},
+			movie_duration = #{movie_duration},
+			movie_type = #{movie_type},
+			movie_country = #{movie_country},
+			movie_picture = #{movie_picture}
+		</set>
+		where movie_id = #{movie_id}
+	</update>
+	
+	<update id="deleteMovieCommentCount" parameterType="long">
+		update movie set movie_commentCount = movie_commentCount -1 where movie_id = #{movie_id}
+	</update>
+	
+	<update id="addMovieCommentCount" parameterType="long">
+		update movie set movie_commentCount = movie_commentCount +1 where movie_id = #{movie_id}
+	</update>
+	
+	<select id="findAllMovies" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+		select * from movie where movie_state = #{movie_state}
+	</select>
+	
+	<select id="findMoviesLikeName" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select * from movie where movie_cn_name like '%${value}%' and movie_state = 1
+	</select>
+	
+	<select id="findMoviesLikeType" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select * from movie where movie_type like '%${value}%' and movie_state = 1
+	</select>
+	
+	<select id="sortMovieByDate" resultMap="BaseResultMap">
+		select * from movie where movie_state = 1  order by movie_releaseDate DESC
+	</select>
+	
+	<select id="sortMovieByCount" resultMap="BaseResultMap">
+		select * from movie where movie_state = 1 order by movie_commentCount DESC
+	</select>
+	
+	<select id="sortMovieByScore" resultMap="BaseResultMap">
+		select * from movie where movie_state = 1 order by movie_score DESC
+	</select>
+	
+	<select id="sortMovieByBoxOffice" resultMap="BaseResultMap">
+		select * from movie where movie_state = 1 order by movie_boxOffice desc
+	</select>
+	
+</mapper>

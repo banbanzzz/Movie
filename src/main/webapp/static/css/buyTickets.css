@@ -1,0 +1,341 @@
+﻿.banner2 .wrapper {
+  		/*background: #000;*/
+	    width: 1200px;
+	    margin: 0 auto;
+	    height: 376px;
+	    position: relative;
+	}	
+  	.banner2 {
+	    width: 100%;
+	    min-width: 1200px;
+	    background: #392f59 url("../images/banner.png") no-repeat 50%;
+	}
+	.banner2 .wrapper .celeInfo-left {
+	    width: 300px;
+	    float: left;
+	    position: relative;
+	    top: 70px;
+	    overflow: hidden;
+	    z-index: 9;
+	}
+  	.celeInfo-left .avatar-shadow .avatar {
+	    border: 4px solid #fff;
+	    height: 322px;
+	    width: 232px;
+	}
+	.celeInfo-left .avatar-shadow, .cinema-left .avatar-shadow {
+	    position: relative;
+	    margin: 0 30px;
+	    width: 240px;
+	    height: 330px;
+	    padding-bottom: 40px;
+	    background: url("../images/gray.jpg") no-repeat bottom;
+	}
+	.banner2 .wrapper .celeInfo-right {
+		height: 100%;
+	    position: relative;
+	    margin-right: 30px;
+	    margin-left: 300px;
+	    margin-top: 70px;
+	}
+	.movie-brief-container {
+	    position: absolute;
+	    top: 73px;
+	    color: #fff;
+	    font-size: 14px;
+	    z-index: 1;
+	}
+	.movie-brief-container .name {
+	    width: 900px;
+	    margin-top: 0;
+	    font-size: 26px;
+	    line-height: 32px;
+	    font-weight: 700;
+	    margin-bottom: 0;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    display: -webkit-box;
+	    -webkit-line-clamp: 2;
+	    -webkit-box-orient: vertical;
+	    max-height: 64px;
+	}
+	.movie-brief-container .ename {
+	    width: 340px;
+	    font-size: 18px;
+	    line-height: 1.3;
+	    margin-bottom: 14px;
+	}
+	.banner2 li, .banner2 p, .banner2 ul {
+	    margin: 0;
+	    padding: 0;
+	    list-style: none;
+	    line-height: 1;
+	}
+	.movie-brief-container ul li {
+	    margin: 12px 0;
+	    line-height: 100%;
+	}
+	.action-buyBtn {
+	    position: absolute;
+	    bottom: 20px;
+	}
+	.action-buyBtn .action a {
+	    cursor: pointer;
+	    float: left;
+	    display: block;
+	    width: 120px;
+	    height: 35px;
+	    background-color: #756189;
+	    margin-right: 10px;
+	    padding-top: 11px;
+	    text-align: center;
+	    font-size: 14px;
+	    line-height: 16px;
+	    color: #fff;
+	    border-radius: 2px;
+	}
+	.action-buyBtn .action i.icon {
+	    display: inline-block;
+	    vertical-align: middle;
+	    margin-top: -2px;
+	    margin-right: 2px;
+	    width: 20px;
+	    height: 20px;
+	}
+	.action-buyBtn .action .wish i.wish-icon {
+    	background: url("../images/heart.jpg");
+	}
+	.action-buyBtn .action .score-btn i.score-btn-icon {
+    	background: url("../images/star.jpg");
+	}
+	.btn {
+	    display: inline-block;
+	    padding: 2px 15px;
+	    line-height: 25px;
+	    font-size: 15px;
+	    color: #fff;
+	    background-color: #df2d2d;
+	}
+	.action-buyBtn .btn.buy {
+	    margin-top: 10px;
+	    width: 250px;
+	    height: 40px;
+	    font-size: 16px;
+	    line-height: 40px;
+	    text-align: center;
+	    border-radius: 2px;
+		padding: 0;
+		color: #ddd;
+	}
+	.action-buyBtn .btn.buy:hover {
+	    color: #fff;
+	}
+	.movie-stats-container {
+	    position: absolute;
+	    top: 158px;
+	    left: 342px;
+	}
+	.movie-stats-container .movie-index {
+	    margin-bottom: 16px;
+	    color: #fff;
+	}
+	.movie-stats-container .movie-index .movie-index-title {
+	    font-size: 12px;
+	    margin-bottom: 8px;
+	}
+	.movie-stats-container .movie-index .movie-index-content {
+    	overflow: hidden;
+	}
+	.movie-stats-container .movie-index .movie-index-content .index-left {
+    	float: left;
+	}
+	.movie-stats-container .movie-index .movie-index-content .info-num {
+	    font-size: 30px;
+	    color: #ffc600;
+	    height: 30px;
+	    line-height: 30px;
+	}
+	.stonefont {
+    	font-family: stonefont;
+	}
+	.movie-stats-container .movie-index .box .stonefont {
+    	font-size: 30px;
+	}
+	.movie-stats-container .movie-index .movie-index-content .index-right {
+	    margin-left: 54px;
+	    font-size: 12px;
+	}
+	.movie-stats-container .movie-index .movie-index-content .star-wrapper {
+	    width: 130px;
+	    height: 15px;
+	    position: relative;
+	    /*background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR…6S4us6l62wa1DjEHrgZ5YkNs34vsMTQ76UYYU+5hG2ilE8ABzT5mRcPmFIAAAAAElFTkSuQmCC);*/
+	    background-repeat: repeat-x;
+		margin-bottom: 4px;
+	}
+	.movie-stats-container .movie-index .movie-index-content .star-wrapper .star-on {
+	    height: 15px;
+	    background-image: url("../images/lightStar.jpg");
+	    background-repeat: repeat-x;
+	}
+	.main-inner{
+		/*background: white;*/
+	}
+	.tags-panel {
+	    border: 1px solid #e5e5e5;
+	    padding: 0 20px;
+	    margin: 40px 0;
+	    position: relative;
+	}
+	.tags-panel li, .tags-panel ul {
+	    margin: 0;
+	    padding: 0;
+	    list-style-type: none;
+	}
+	.tags-title {
+	    height: 24px;
+	    line-height: 24px;
+	    float: left;
+	    color: #999;
+	    font-size: 14px;
+	}
+	.tags-panel ul.tags {
+    	margin-left: 40px;
+	}
+	.tags li.active {
+	    background: #f34d41;
+	    color: #fff;
+	}
+	.tags li {
+	    border-radius: 14px;
+	    padding: 3px 9px;
+	    display: inline-block;
+	    margin-left: 12px;
+	}
+	.tags li.active a {
+    	color: #fff;
+	}
+	.tags li a {
+	    color: #333;
+	    font-size: 14px;
+	}
+	.tags-line-border {
+    	border-top: 1px dashed #e5e5e5;
+	}
+	.tags-line {
+    	padding: 10px 0!important;
+	}
+	.cinemas-list .cinemas-list-header {
+	    font-size: 18px;
+	    color: #333;
+	    border-left: 4px solid #f03d37;
+	    padding-left: 6px;
+	    line-height: 18px;
+	    margin: 0;
+	}
+	.cinemas-list .cinema-cell {
+	    display: block;
+	    padding: 20px 0;
+	    border-bottom: 1px dashed #e5e5e5;
+	}
+	.cinemas-list .cinema-info {
+	    display: inline-block;
+	    max-width: 80%;
+	}
+	.cinemas-list .cinema-name {
+	    display: inline-block;
+	    font-size: 16px;
+	    line-height: 18px;
+		color: #333;
+		text-decoration: none;
+	    margin-bottom: 10px;
+	}
+	.cinemas-list .cinema-address {
+	    font-size: 14px;
+	    line-height: 14px;
+	    color: #999;
+	}
+	.cinemas-list .buy-btn {
+	    float: right;
+	    width: 80px;
+	    height: 45px;
+	    line-height: 45px;
+	    margin-left: 36px;
+	}
+	.cinemas-list .buy-btn a {
+	    display: inline-block;
+	    width: 100%;
+	    height: 30px;
+	    color: #fff;
+	    background-color: #f03d37;
+	    font-size: 14px;
+	    line-height: 30px;
+	    border-radius: 100px;
+	    text-align: center;
+	    -webkit-box-shadow: 0 2px 10px -2px #f03d37;
+		box-shadow: 0 2px 10px -2px #f03d37;
+		text-decoration: none;
+	}
+	.cinemas-list .price {
+	    float: right;
+	    font-size: 12px;
+	    color: #999;
+	    height: 45px;
+	    line-height: 45px;
+	}
+	.cinemas-list .price .rmb {
+    	margin-right: -4px;
+	}
+	.cinemas-list .price .price-num {
+	    font-size: 16px;
+	    margin-right: -3px;
+	    font-weight: 700;
+	}
+	.red {
+   		color: #f03d37;
+	}
+	.cinema-pager {
+    	text-align: center;
+	}
+	.list-pager {
+		display: block;
+	    list-style-type: disc;
+	    margin-block-start: 1em;
+	    margin-block-end: 1em;
+	    margin-inline-start: 0px;
+	    margin-inline-end: 0px;
+	    padding-inline-start: 40px;
+	}
+	.list-pager li.active {
+	    border-color: #ef4238;
+	    background-color: #ef4238;
+	}
+	.list-pager li {
+	    display: inline-block;
+	    height: 30px;
+	    margin: 0 4px;
+	    border: 1px solid #d8d8d8;
+	    line-height: 30px;
+	    text-align: center;
+	    color: #999;
+	}
+	.list-pager li.active a {
+    	color: #fff;
+	}
+	.list-pager a {
+	    display: block;
+	    padding: 0 12px;
+	    color: #333;
+	}
+
+	.list-pager a {
+	    font-size: 14px;
+	}
+	.banner2 .action-buyBtn a{
+		text-decoration: none;
+	}
+	.moviedetail{
+		height: 40px !important;
+		width: 20px !important;
+		background-color: rgba(red, green, blue, 0.5);
+	}

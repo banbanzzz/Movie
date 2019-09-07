@@ -1,0 +1,319 @@
+.container{
+    display: block;
+    margin-bottom: 100px;
+    padding: 0;
+}
+.container .order-progress-bar{
+    height: 60px;
+    width: 100%;
+    margin: 40px 0;
+    text-align: center;
+}
+.container .order-progress-bar .step{
+    float: left;
+    width: 25%;
+}
+.container .order-progress-bar .step .step-num{
+    color: #fff;
+    font-size: 12px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffd8d7;
+    position: relative;
+    top: 10px;
+}
+.container .order-progress-bar .first .bar{
+    border-left-color: transparent !important;
+}
+.container .order-progress-bar .last .bar{
+    border-right-color: transparent !important;
+}
+.container .order-progress-bar .step .bar{
+    width: 0;
+    height: 4px;
+    border-left: 150px solid #ffd8d7;
+    border-right: 150px solid #ffd8d7;
+}
+.container .order-progress-bar .done .step-num{
+    background-color: #f03d37;
+}
+.container .order-progress-bar .done .bar{
+    border-left: 150px solid #f03d37;
+    border-right: 150px solid #f03d37;
+}
+.container .order-progress-bar .step .step-next{
+    font-size: 14px;
+    color: #999;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+
+
+
+.main{
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    font-size: 0;
+    min-height: 600px;
+}
+.main .hall{
+    width: 770px;
+    display: inline-block;
+    vertical-align: top;
+}
+.main .hall .seat-example{
+    margin: 30px 0 30px 118px;
+}
+.main .hall .seat-example .example{
+    display: inline-block;
+    font-size: 16px;
+    color: #666;
+    height: 26px;
+    line-height: 26px;
+    padding-left: 38px;
+    background-repeat: no-repeat;
+    margin-right: 50px;
+}
+.main .hall .seat-example .selectable-example{
+    background-image: url("../images/selectable_seat.JPG");
+}
+.main .hall .seat-example .sold-example{
+    background-image: url("../images/sold_seat.JPG");
+}
+.main .hall .seat-example .selected-example{
+    background-image: url("../images/selected_seat.JPG");
+}
+.main .hall .seat-example .couple-example{
+    padding-left: 77px;
+    background-image: url("../images/couple_seat.JPG");
+}
+.main .hall .seats-block{
+    font-size: 0;
+    overflow: hidden;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+.main .hall .seats-block .row-id-container{
+    width: 20px;
+    float: left;
+    margin-top: 112px;
+    white-space: normal;
+}
+.main .hall .seats-block .row-id-container .row-id{
+    font-size: 16px;
+    color: #999;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 26px;
+    line-height: 29px;
+    text-align: center;
+}
+.main .hall .seats-block .seats-container{
+    margin-left: 50px;
+    overflow: auto;
+    position: relative;
+    padding-top: 112px;
+}
+.main .hall .seats-block .seats-container .screen-container{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.main .hall .seats-block .seats-container .screen-container .screen{
+    width: 550px;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    background: url("../images/screen.JPG");
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 40px
+
+}
+.main .hall .seats-block .seats-container .screen-container .c-screen-line {
+    width: 0;
+    border-left: 1px dashed #e5e5e5;
+    position: absolute;
+    top: 90px;
+    bottom: 0;
+    left: 50%;
+}
+.main .hall .seats-block .seats-wrapper{
+    display: inline-block;
+    min-width: 550px;
+}
+.main .hall .seats-block .seats-wrapper .row{
+    white-space: nowrap;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.main .hall .seats-block .seats-wrapper .row .seat{
+    display: inline-block;
+    font-size: 0;
+    width: 30px;
+    height: 26px;
+    margin: 0 5px;
+    background: url(../images/selectable_seat.JPG) no-repeat;
+    background-position: 0 1px;
+}
+.main .hall .seats-block .seats-wrapper .row .empty{
+    background-image: none;
+}
+.main .hall .seats-block .seats-wrapper .row .selectable{
+    background: url(../images/selectable_seat.JPG) no-repeat;
+}
+.main .hall .seats-block .seats-wrapper .row .selected{
+    background: url(../images/selected_seat.JPG) no-repeat;
+}
+.main .hall .seats-block .seats-wrapper .row .sold{
+    background: url(../images/sold_seat.JPG) no-repeat;
+    pointer-events: none;
+}
+
+
+
+
+
+.main .side{
+    width: 368px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    display: inline-block;
+    min-height: 650px;
+}
+.main .side .poster{
+    width: 115px;
+    height: 158px;
+    border: 2px solid #fff;
+    -webkit-box-shadow: 0 2px 7px 0 hsla(0,0%,53%,.5);
+    box-shadow: 0 2px 7px 0 hsla(0,0%,53%,.5);
+    float: left;
+}
+.main .side .poster img{
+    width: 100%;
+    height: 100%;
+}
+.main .side .content{
+    margin-left: 140px;
+}
+.main .side .content .name{
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 14px;
+}
+.main .side .content .text-ellipsis{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.main .side .content .info-item{
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 4px
+}
+.main .side .content .info-item .value{
+    color: #151515;
+    margin-left: 2px;
+}
+.main .side .show-info{
+    margin-top: 20px;
+}
+.main .side .show-info .info-item{
+    margin-bottom: 9px;
+    color: #999;
+}
+.main .side .show-info .info-item span{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+}
+.main .side .show-info .info-item .value{
+    width: 85%;
+    color: #151515;
+    margin-left: 2px;
+}
+.main .side .show-info .info-item .screen{
+    color: #f03d37;
+}
+.main .side .ticket-info{
+    padding: 20px 0 10px;
+    border-top: 1px dashed #e5e5e5;
+    border-bottom: 1px dashed #e5e5e5;
+}
+.main .side .ticket-info .no-ticket{
+    font-size: 14px;
+    color: #999;
+    margin: 0 0 20px;
+}
+.main .side .ticket-info .has-ticket .text{
+    font-size: 14px;
+    color: #999;
+    float: left;
+}
+.main .side .ticket-info .has-ticket .ticket-container{
+    margin-left: 42px;
+    margin-bottom: 20px;
+    position: relative;
+    top: -5px;
+}
+.main .side .ticket-info .has-ticket .ticket-container .ticket{
+    cursor: default;
+    position: relative;
+    font-size: 12px;
+    color: #f03d37;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 12px 10px 0;
+    background: url(../images/ticket.JPG) no-repeat;
+}
+.main .side .ticket-info .total-price{
+    font-size: 14px;
+    color: #333;
+}
+.main .side .confirm-order{
+    padding: 20px 0;
+    text-align: center;
+}
+.main .side .confirm-order .email{
+    color: #999;
+    font-size: 14px;
+}
+.main .side .confirm-order .email .email-num{
+    color: #151515;
+}
+.main .side .confirm-order .confirm-btn{
+    cursor: pointer;
+    width: 260px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 21px;
+    position: relative;
+    left: 50%;
+    margin: 38px 0 0 -130px;
+    background-color: #f03d37;
+    -webkit-box-shadow: 0 2px 10px -2px #f03d37;
+    box-shadow: 0 2px 10px -2px #f03d37;
+}
+.main .side .confirm-order .disable{
+    cursor: default;
+    background-color: #dedede;
+    box-shadow: none;
+    pointer-events: none;
+}

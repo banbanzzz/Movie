@@ -1,0 +1,227 @@
+.main{
+	overflow: hidden;
+	/* height: 2159px; */
+	/*background-color: green;*/
+}
+.main .main-inner{
+	width: 981px;
+	/* height: 2079px; */
+	margin: 0 auto 0 auto;
+}
+.main .main-buyticket{
+	width: 1200px;
+	/* height: 2079px; */
+	margin: 0 auto 0 auto;
+}
+.main .movie-grid{
+	margin-top: 10px;
+	float: left;
+	/*width: 738px;*/
+	width: 850px;
+	/* height: 1414px; */
+	margin-right: 40px;
+}
+.main .main-page{
+	width: 1271px !important;
+	height: 1760px !important;
+}
+.panel-header {
+	overflow: hidden;
+	height: 26px;
+	line-height: 26px;
+}
+.panel-title {
+	font-size: 26px;
+	color: #ffb400;
+}
+.panel-arrow {
+	background: url("../images/arrow.jpg") top no-repeat;
+}
+.panel-arrow {
+	display: inline-block;
+	width: 8px;
+	height: 14px;
+	vertical-align: top;
+}
+.panel-more {
+	font-size: 14px;
+	line-height: 16px;
+	float: right;
+	margin-top: 10px;
+}
+.panel-content{
+	height: 550px;
+	
+}
+.textcolor_red {
+	color: #ef4238!important;
+}
+.textcolor_blue{
+	color: #2d98f3!important;
+}
+.main .aside{
+	float: right;
+	width: 360px;
+	/* height: 2079px; */
+	
+}
+.movie-list{
+	margin-top: 23px;
+}
+.movie-list li{
+	margin: 0 45px 28px 0px;
+	float: left;
+	width: 160px;
+	height: 259px;
+	background: #fff;
+	border: 1px solid #efefef;
+}
+.movie-poster{
+	height: 220px;
+}
+.movie-poster img {
+	border-style: none;
+	height: 220px;
+	width: 160px;
+}
+.movie-poster .movie-overlay {
+	color: #fff;
+	position: relative;
+	top: -26px;
+	left: 0;
+	/*background: green;*/
+}
+.movie-title-padding {
+	margin-right: 35px;
+}
+.movie-title {
+	font-size: 16px;
+	line-height: 22px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0 10px;
+}
+.movie-score {
+	color: #ffb400;
+	float: right;
+	margin-right: 10px;
+}
+.movie-detail-strong {
+	height: 39px;
+	line-height: 39px;
+}
+.movie-detail {
+	cursor: pointer;
+	position: relative;
+	top: -19px;
+	width: 100%;
+	height: 41px;
+	line-height: 41px;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.movie-detail a:hover{
+	text-decoration: none;
+	background: #ef4238;
+	color: #fff;
+}
+.movie-sale .active {
+	color: #ef4238;
+}
+.movie-sale a {
+	display: block;
+	width: 160px;
+	height: 40px;
+	color: #999;
+	font-size: 14px;
+}
+.movie-item {
+	width: 160px;
+	height: 260px;
+}
+.movie-ver {
+	width: 69px;
+	height: 25px;
+	position: relative;
+	top: -280px;
+	left: -2px;
+	font-size: 12px;
+	color: #fff;
+}
+.movie-ver i.imax3d {
+	display: block;
+	width: 69px;
+	height: 25px;
+	background-image: url("../images/3Dmax.jpg");
+}
+.main .panel{
+	margin-top: 28px;
+}
+.sidepanel{
+	margin-top: 10px !important;
+}
+.movie-wish {
+	width: 158px;
+	height: 41px;
+	font-size: 14px;
+	color: #ffb400;
+	background-color: #fbfbfb;
+	text-align: left;
+	padding-left: 10px;
+}
+.movie-presale-sep {
+	border-right: 1px dotted #e5e5e5;
+}
+.movie-presale a {
+	cursor: pointer;
+	width: 50%;
+	box-sizing: border-box;
+	display: inline-block;
+	vertical-align: top;
+	color: #999;
+	font-size: 14px;
+	background: #fff;
+}
+.movie-presale a:hover{
+	background: #2d98f3;
+}
+.movie-presale{
+	border: 1px solid #eee;
+}
+
+.tags-line a{
+	text-decoration: none;
+}
+.tags-line a:hover{
+	color: #f34d41;
+}
+.list-pager a{
+	text-decoration: none;
+}
+.list-pager li:hover{
+	border: 1px solid #f34d41;
+}
+.list-pager .active{
+	background: #f34d41;
+    color: #fff;
+}
+.main-detail{
+	width: 1131px !important;
+}
+.main-movielist{
+	width: 1100px !important;
+	margin: 0 0 0 400px !important;
+}	
+.main .main-bodyz{
+	width: 1100px !important;
+}
+.movieList{
+	width: 1100px !important;
+}
+ .main .ranking-imgs{
+ 	height: 78px;
+ 	width: 120px;
+ }

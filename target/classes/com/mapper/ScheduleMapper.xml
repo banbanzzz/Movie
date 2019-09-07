@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.ScheduleMapper">
+	<resultMap type="com.entity.Schedule" id="BaseResultMap">
+		<id property="schedule_id" column="schedule_id" javaType="long"/>
+		<result property="hall_id" column="hall_id" javaType="long"/>
+		<result property="movie_id" column="movie_id" javaType="long"/>
+		<result property="schedule_price" column="schedule_price" javaType="java.lang.Integer"/>
+		<result property="schedule_remain" column="schedule_remain" javaType="java.lang.Integer"/>
+		<result property="schedule_startTime" column="schedule_startTime" javaType="java.lang.String"/>
+		<result property="schedule_state" column="schedule_state" javaType="java.lang.Integer"/>
+	</resultMap>
+	
+	<select id="findScheduleById" parameterType="long" resultMap="BaseResultMap">
+		select * from schedule where schedule_id = #{schedule_id}
+	</select>
+	
+	<select id="findScheduleByState" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+		select * from schedule where schedule_state = #{schedule_state}
+	</select>
+	
+	<select id="findScheduleByCinemaAndMovie" resultMap="BaseResultMap">
+		select schedule.* from schedule,hall where schedule.hall_id=hall.hall_id
+		 and hall.cinema_id = #{cinema_id} and movie_id = #{movie_id} and schedule_state = 1
+	</select>
+	
+	<select id="findScheduleByCinemaAndMovieAndHall" resultMap="BaseResultMap">
+		select schedule.* from schedule,hall where schedule.hall_id=hall.hall_id
+		 and hall.cinema_id = #{cinema_id} and movie_id = #{movie_id} and schedule.hall_id = #{hall_id} and schedule_state = 1
+	</select>
+	
+	<select id="findAllSchedule" resultMap="BaseResultMap">
+		select * from schedule
+	</select>
+	
+	<select id="findScheduleByMovieName" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select schedule.* from schedule,movie
+		where schedule.movie_id = movie.movie_id and schedule.schedule_state = 1 and movie.movie_cn_name like '%${value}%'
+	</select>
+	
+	<select id="findOffScheduleByMovieName" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select schedule.* from schedule,movie
+		where schedule.movie_id = movie.movie_id and schedule.schedule_state = 0 and movie.movie_cn_name like '%${value}%'
+	</select>
+	
+	<insert id="addSchedule" parameterType="com.entity.Schedule">
+		insert into schedule(hall_id,movie_id,schedule_price,schedule_remain,schedule_startTime)
+		values(#{hall_id},#{movie_id},#{schedule_price},#{schedule_remain},#{schedule_startTime})
+	</insert>
+	
+	<update id="updateSchedule" parameterType="com.entity.Schedule">
+		update schedule
+		<set>
+			schedule_price = #{schedule_price}
+		</set>
+		where schedule_id = #{schedule_id}
+	</update>
+	
+	<update id="deleteSchedule" parameterType="long">
+		update schedule set schedule_state = 0 where schedule_id = #{schedule_id}
+	</update>
+	
+	<update id="addScheduleRemain" parameterType="long">
+		update schedule set schedule_remain = schedule_remain + 1 where schedule_id = #{schedule_id}
+	</update>
+	
+	<update id="delScheduleRemain" parameterType="long">
+		update schedule set schedule_remain = schedule_remain - 1 where schedule_id = #{schedule_id}
+	</update>
+</mapper>

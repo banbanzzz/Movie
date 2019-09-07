@@ -1,0 +1,23 @@
+.footer{
+    margin-top: 50px;
+    height: 211px;
+    background-color: #262426;
+ }
+ .footer p{
+	color: #666;
+ }
+ .footer p a{
+	 color:#ef4238;
+ }
+ .footer span {
+    display: inline-block;
+    border-left: 1px solid #444;
+    margin: 0 7px;
+    height: 12px;
+    position: relative;
+    top: 1px;
+}
+.footer div {
+    text-align:center;
+    padding: 57px 0;
+}

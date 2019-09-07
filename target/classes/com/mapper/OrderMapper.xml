@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.OrderMapper">
+	<resultMap type="com.entity.Order" id="BaseResultMap">
+		<id property="order_id" column="order_id" javaType="java.lang.String"/>
+		<result property="order_position" column="order_position" javaType="java.lang.String"/>
+		<result property="order_state" column="order_state" javaType="java.lang.Integer"/>
+		<result property="schedule_id" column="schedule_id" javaType="long"/>
+		<result property="user_id" column="user_id" javaType="long"/>
+		<result property="order_price" column="order_price" javaType="java.lang.Integer"/>
+		<result property="order_time" column="order_time" javaType="java.util.Date"/>
+	</resultMap>
+	
+	<select id="findOrderById" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select * from orderinfo where order_id = #{order_id}
+	</select>
+	
+	<select id="findAllOrders" resultMap="BaseResultMap">
+		select * from orderinfo order by order_time desc
+	</select>
+	
+	
+	<select id="findOrdersByScheduleId" parameterType="long" resultMap="BaseResultMap">
+		select * from orderinfo where schedule_id = #{schedule_id} and order_state != 2 order by order_time desc
+	</select>
+	
+	<select id="findOrdersByState" parameterType="int" resultMap="BaseResultMap">
+		select * from orderinfo where order_state = #{order_state} order by order_time desc
+	</select>
+	
+	<select id="findOrdersByUserName" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select orderinfo.*  from orderinfo,user where orderinfo.user_id = user.user_id and user.user_name = #{user_name} order by order_time desc
+	</select>
+	
+	<select id="findRefundOrderByUserName" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select orderinfo.*  from orderinfo,user where orderinfo.user_id = user.user_id and user.user_name = #{user_name} and orderinfo.order_state = 0 order by order_time desc
+	</select>
+	<insert id="addOrder" parameterType="com.entity.Order">
+		insert into orderinfo(order_id,order_position,schedule_id,user_id,order_price,order_time)
+		values(#{order_id},#{order_position},#{schedule_id},#{user_id},#{order_price},#{order_time})
+	</insert>
+	
+	<update id="updateOrderStateToRefund" parameterType="java.lang.String">
+		update orderinfo set order_state = 0 where order_id = #{order_id}
+	</update>
+	
+	<update id="updateOrderStateToRefunded" parameterType="java.lang.String">
+		update orderinfo set order_state = 2 where order_id = #{order_id}
+	</update>
+</mapper>
