@@ -38,7 +38,7 @@
 ![qiantai](https://github.com/banbanzzz/Movie/blob/master/src/main/webapp/github/详情.png)
 ![qiantai](https://github.com/banbanzzz/Movie/blob/master/src/main/webapp/github/选择影院.png)
 ![qiantai](https://github.com/banbanzzz/Movie/blob/master/src/main/webapp/github/选择场次.png)
-![qiantai](https://github.com/banbanzzz/Movie/blob/master/src/main/webapp/github/选座座位.png)
+![qiantai](https://github.com/banbanzzz/Movie/blob/master/src/main/webapp/github/选择座位.png)
 ![qiantai](https://github.com/banbanzzz/Movie/blob/master/src/main/webapp/github/pay.png)
 ![qiantai](https://github.com/banbanzzz/Movie/blob/master/src/main/webapp/github/success.png)
 ![qiantai](https://github.com/banbanzzz/Movie/blob/master/src/main/webapp/github/个人信息.png)
