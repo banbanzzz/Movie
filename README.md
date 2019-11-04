@@ -30,7 +30,7 @@
 
 ### 数据库E-R图预览：
 
-![E-R图](https://github.com/banbanzzz/Movie/blob/master/src/main/webapp/github/sql-er.png)
+![E-R图](https://github.com/banbanzzz/Movie/tree/master/src/main/webapp/github/sql-er.png)
 
 ### 前台预览：
 ![qiantai](https://github.com/banbanzzz/Movie/blob/master/src/main/webapp/github/index.png)
