@@ -28,7 +28,6 @@
         - 统计系统电影类型的票房数据
         - 统计系统电影票房排行前10的电影及票房<br>
 
-
 ### 前台预览：
 ![qiantai](https://github.com/banbanzzz/Movie/tree/master/src/main/webapp/github/index.png)
 ![qiantai](https://github.com/banbanzzz/Movie/blob/master/src/main/webapp/github/电影.png)
