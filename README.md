@@ -29,7 +29,7 @@
         - 统计系统电影票房排行前10的电影及票房<br>
         
 ### 前台预览：
-![qiantai](https://github.com/banbanzzz/Movie/tree/master/src/main/webapp/github/index.png)
+![qiantai](https://github.com/banbanzzz/Movie/tree/master/src/main/webapp/github/index.PNG)
 ![qiantai](https://github.com/banbanzzz/Movie/blob/master/src/main/webapp/github/电影.png)
 ![qiantai](https://github.com/banbanzzz/Movie/blob/master/src/main/webapp/github/详情.png)
 ![qiantai](https://github.com/banbanzzz/Movie/blob/master/src/main/webapp/github/选择影院.png)
@@ -52,6 +52,4 @@
 ![houtai](https://github.com/banbanzzz/Movie/blob/master/src/main/webapp/github/order2.png)
 ![houtai](https://github.com/banbanzzz/Movie/blob/master/src/main/webapp/github/order3.png)
 ![houtai](https://github.com/banbanzzz/Movie/blob/master/src/main/webapp/github/data.png)
-
-
 
